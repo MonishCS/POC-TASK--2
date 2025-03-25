@@ -25,15 +25,6 @@ step 2: Allow Root login & Password Authentication
         ┌──(monish㉿vbox)-[~]
         └─$ sudo sed -i 's/passwordaAuthentication no/passwordAuthentication yes/' /etc/ssh/sshd_config
 
-  # Restart ssh to applay changesHydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-03-17 21:50:56
-[DATA] max 4 tasks per 1 server, overall 4 tasks, 5 login tries (l:1/p:5), ~2 tries per task
-[DATA] attacking ssh://178.0.09:22/
-[22][ssh] host: 178.0.0.9   login: root   password: *****
-1 of 1 target successfully completed, 1 valid password found
-Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2025-03-17 21:50:59
-        ┌──(monish㉿vbox)-[~]
-        └─$ sudo systemctl restart ssh 
-
   # Verify ssh is listening on port 
         ┌──(monish㉿vbox)-[~]
         └─$ ss -tlnp | grep ssh
