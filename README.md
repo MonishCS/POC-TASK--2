@@ -69,16 +69,27 @@ step 3: perform a brute-force attack on ssh
    The key fingerprint is:
    SHA256:*********************************** 
    The key's randomart image is:
+   
    +---[RSA 4096]----+
+   
    |  .=o+*+=B*= .   |
+   
    |  ..O=.+*B=.o    |
+   
    |   =.oo .E=  .   |
+   
    |    .  ..o. . .  |
+   
    |        S  . + . |
+   
    |            = ...|
+   
    |           o oo o|
+   
    |            . .+ |
+   
    |             ..  |
+   
    +----[SHA256]-----+
 
    # Disable password authentication 
