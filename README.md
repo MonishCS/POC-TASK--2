@@ -152,3 +152,5 @@ Disable root login and password authentication (PermitRootLogin no, PasswordAuth
 Enable key-based authentication (ssh-keygen, ssh-copy-id user@remote-server).
 
 Install and configure Fail2Ban to prevent brute-force attacks (sudo apt install -y fail2ban).
+
+✅ Objective: Understand SSH security risks, demonstrate an attack, and implement best practices to harden remote access.
