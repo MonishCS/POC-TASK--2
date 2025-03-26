@@ -126,3 +126,29 @@ step 5: Prevent Brute-force Attacks with Fail2Ban
    # Login in Root
           ┌──(monish㉿vbox)-[~]
           └─$ ssh root@178.0.0.9
+
+📌  SUMMARY:
+
+This Proof of Concept (PoC) demonstrates how weak SSH configurations can be exploited using brute-force attacks and how to secure SSH through best practices.
+
+🔹 Setup:
+
+Enable SSH (sudo apt install -y openssh-server).
+
+Allow root login (PermitRootLogin yes) and password authentication (PasswordAuthentication yes).
+
+🔹 Exploitation:
+
+Identify open SSH ports (nmap -p 22 <target-ip>).
+
+Launch a brute-force attack using Hydra (hydra -l root -P rockyou.txt <target-ip> ssh).
+
+Attempt brute-force access with Medusa (medusa -h <target-ip> -u root -P rockyou.txt -M ssh).
+
+🔹 Mitigation:
+
+Disable root login and password authentication (PermitRootLogin no, PasswordAuthentication no).
+
+Enable key-based authentication (ssh-keygen, ssh-copy-id user@remote-server).
+
+Install and configure Fail2Ban to prevent brute-force attacks (sudo apt install -y fail2ban).
